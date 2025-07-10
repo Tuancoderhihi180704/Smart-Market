@@ -1,0 +1,250 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+
+  .left, .right {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    background: linear-gradient(180deg, #f5f9ff, #e4f0ff);
+
+    .logo .icon {
+      background: linear-gradient(135deg, #4a00e0, #8e2de2);
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #1a1a1a;
+    }
+
+    p {
+      text-align: center;
+      margin: 1rem 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      font-size: 15px;
+      color: #333;
+
+      li {
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 8px;
+          color: #4a00e0;
+        }
+      }
+    }
+  }
+
+  .right {
+    background: #fff;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #555;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 16px;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+
+      &:focus {
+        border-color: #4a00e0;
+        box-shadow: 0 0 0 2px rgba(74, 0, 224, 0.2);
+      }
+    }
+
+    .passwordInput {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 1.2rem;
+
+      input {
+        width: 100%;
+        padding: 12px 44px 12px 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 15px;
+        outline: none;
+
+        &:focus {
+          border-color: #4a00e0;
+          box-shadow: 0 0 0 2px rgba(74, 0, 224, 0.2);
+        }
+      }
+
+      .eyeIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #999;
+
+        &:hover {
+          color: #4a00e0;
+        }
+
+        svg {
+          font-size: 18px;
+          display: block;
+        }
+      }
+    }
+
+    .loginBtn {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      background: linear-gradient(to right, #4a00e0, #8e2de2);
+      color: white;
+      transition: 0.2s ease;
+      margin-bottom: 1rem;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .or {
+      text-align: center;
+      color: #888;
+      margin: 1rem 0;
+      font-size: 13px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+
+        &.facebook {
+          background: #1877f2;
+          color: white;
+        }
+
+        &.google {
+          background: #fff;
+          border: 1px solid #ccc;
+        }
+
+        &.github {
+          background: #000;
+          color: white;
+        }
+
+        &.phone {
+          background: #f1f1f1;
+          color: #4a00e0;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+
+    .options {
+      width: 100%;
+      max-width: 400px;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 1.2rem;
+
+      input[type="checkbox"] {
+        margin-right: 6px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #4a00e0;
+        margin: 0 4px;
+      }
+    }
+
+    .register {
+      text-align: center;
+      font-size: 13px;
+
+      a {
+        color: #8e2de2;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .left, .right {
+      flex: unset;
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    .right {
+      input[type="text"],
+      .passwordInput,
+      .options,
+      .loginBtn {
+        max-width: 100%;
+      }
+    }
+  }
+}

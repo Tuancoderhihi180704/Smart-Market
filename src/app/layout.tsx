@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// import { ModeToggle } from "@/components/mode-toggle";
 
 const inter = Inter({
   subsets: ["vietnamese"],
@@ -29,6 +30,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            {/* <ModeToggle/> */}
             {children}
           </ThemeProvider>
       </body>
