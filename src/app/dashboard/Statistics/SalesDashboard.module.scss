@@ -1,0 +1,214 @@
+// SalesDashboard.module.scss
+
+$green: #10b981;
+$red: #ef4444;
+$orange: #f59e0b;
+$purple: #6366f1;
+$gray: #6b7280;
+$light-gray: #f9fafb;
+$border: #e5e7eb;
+
+.container {
+  padding: 24px;
+  background: $light-gray;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.subheading {
+  font-size: 16px;
+  color: $gray;
+  margin-bottom: 16px;
+}
+
+.filterBox {
+  margin-bottom: 24px;
+
+  label {
+    font-weight: 600;
+    margin-right: 12px;
+  }
+
+  select {
+    padding: 8px 14px;
+    border: 1px solid $border;
+    border-radius: 8px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .icon {
+    font-size: 22px;
+    color: $purple;
+  }
+
+  .value {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .label {
+    font-size: 14px;
+    color: $gray;
+  }
+
+  .change {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &.card1 .icon {
+    color: $purple;
+  }
+
+  &.card2 .icon {
+    color: $green;
+  }
+
+  &.card3 .icon {
+    color: $orange;
+  }
+
+  &.card4 .icon {
+    color: $red;
+  }
+}
+
+.green {
+  color: $green;
+}
+
+.orange {
+  color: $orange;
+}
+
+.red {
+  color: $red;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .barChart {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 180px;
+
+    .barWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+
+      .bar {
+        width: 20px;
+        background: $purple;
+        border-radius: 6px 6px 0 0;
+        transition: height 0.3s ease;
+      }
+
+      .label {
+        font-size: 12px;
+        color: $gray;
+      }
+
+      .value {
+        font-size: 11px;
+        color: $gray;
+      }
+    }
+  }
+}
+
+.topBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .topList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .topItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid $border;
+
+      svg {
+        margin-right: 8px;
+      }
+
+      span {
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      b {
+        font-size: 13px;
+      }
+
+      &.green {
+        color: $green;
+      }
+
+      &.red {
+        color: $red;
+      }
+
+      &.orange {
+        color: $orange;
+      }
+    }
+  }
+}
