@@ -9,13 +9,13 @@ export default function DashboardPage() {
   return (
     <div className={styles.container}>
       {/* Sidebar bên trái */}
-      <Sidebar role="seller" />
+      {/* <Sidebar role="seller" /> */}
 
       {/* Phần nội dung chính */}
       <main className={styles.mainContent}>
         <SupportPage/>
         <AIContent />
-
+       
       </main>
     </div>
   );
