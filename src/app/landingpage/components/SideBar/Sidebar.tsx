@@ -52,7 +52,7 @@ export default function Sidebar({ role }: { role: Role }) {
       { label: "Gợi ý nhập hàng", icon: faLightbulb, href: "/dashboard/AI" },
       { label: "Thanh toán", icon: faCreditCard, href: "/payments" },
       { label: "Hỗ trợ", icon: faCircleQuestion, href: "/dashboard/AI_Support" },
-      { label: "Sao lưu & khôi phục", icon: faCloud, href: "/backup" },
+      { label: "Sao lưu & khôi phục", icon: faCloud, href: "/dashboard/Back_Up" },
       { label: "Cài đặt", icon: faGears, href: "/settings" },
     ],
     user: [
