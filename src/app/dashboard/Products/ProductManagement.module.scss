@@ -9,9 +9,11 @@ $primary: #6366f1;
 .container {
   padding: 24px;
   background: $bg;
-  min-height: calc(100vh + 100px);
+  min-height: 100vh;
 }
-
+.heading{
+    font-size: 25px;
+}
 .header {
   display: flex;
   justify-content: space-between;

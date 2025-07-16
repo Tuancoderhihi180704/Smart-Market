@@ -68,7 +68,7 @@ export default function ProductManagementPage() {
 
   return (
     <div className={styles.container}>
-         <h1>Quản Lý Sản Phẩm Của Bạn !</h1>
+         <h1 className={styles.heading}>Quản Lý Sản Phẩm Của Bạn !</h1>
       <div className={styles.header}>
         <input type="text" placeholder="Tìm kiếm sản phẩm…" className={styles.search} />
         <div className={styles.actions}>

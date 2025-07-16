@@ -1,0 +1,196 @@
+$gray: #6b7280;
+$light-gray: #f9fafb;
+$border: #e5e7eb;
+$purple: #6366f1;
+$orange: #f59e0b;
+$blue: #3b82f6;
+$green: #10b981;
+$red: #ef4444;
+
+.container {
+  padding: 24px;
+  background: $light-gray;
+  min-height: 100vh ;
+//   padding-bottom: 100px;
+  
+}
+.heading{
+    font-size: 30px;
+}
+.topBar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .createBtn {
+    background: $purple;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .searchInput {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    min-width: 250px;
+  }
+
+  .selectStatus {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid $border;
+  }
+
+  .viewToggle {
+    background: #fff;
+    border: 1px solid $border;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    svg {
+      color: $gray;
+      cursor: pointer;
+      font-size: 16px;
+
+      &.activeView {
+        color: $purple;
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid $border;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #f3f4f6;
+    font-weight: 600;
+  }
+
+  .phone {
+    color: $gray;
+    font-size: 13px;
+  }
+
+  .status {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  .statusProcessing {
+    background: rgba($orange, 0.15);
+    color: $orange;
+  }
+
+  .statusShipping {
+    background: rgba($blue, 0.15);
+    color: $blue;
+  }
+
+  .statusSuccess {
+    background: rgba($green, 0.15);
+    color: $green;
+  }
+
+  .statusCanceled {
+    background: rgba($red, 0.15);
+    color: $red;
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+
+    .link {
+      color: $blue;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .linkDanger {
+      color: $red;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  align-items: center;
+
+  .pageControl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    select {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid $border;
+    }
+
+    button {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      background: #f3f4f6;
+      color: #333;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &.current {
+        background: $purple;
+        color: #fff;
+      }
+    }
+  }
+}
