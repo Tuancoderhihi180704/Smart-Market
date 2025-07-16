@@ -1,0 +1,155 @@
+$bg: #f9fafb;
+$white: #ffffff;
+$gray: #6b7280;
+$border: #e5e7eb;
+$green: #10b981;
+$red: #ef4444;
+$primary: #6366f1;
+
+.container {
+  padding: 24px;
+  background: $bg;
+  min-height: calc(100vh + 100px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .search {
+    padding: 10px 16px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    width: 280px;
+    font-size: 14px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      svg {
+        font-size: 14px;
+      }
+    }
+
+    .addBtn {
+      background: $primary;
+      color: #fff;
+
+      &:hover {
+        background: darken($primary, 5%);
+      }
+    }
+
+    .exportBtn {
+      background: #22c55e;
+      color: #fff;
+
+      &:hover {
+        background: darken(#22c55e, 5%);
+      }
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid $border;
+    background: $white;
+    font-size: 14px;
+  }
+}
+
+.table {
+  width: 100%;
+  background: $white;
+  border-radius: 12px;
+  overflow: hidden;
+  border-collapse: collapse;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid $border;
+    font-size: 14px;
+  }
+
+  th {
+    background: #f3f4f6;
+    font-weight: 600;
+  }
+
+  .price {
+    font-weight: bold;
+    color: #111827;
+  }
+
+  .iconBox {
+    width: 32px;
+    height: 32px;
+    background: $green;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.red {
+      background: $red;
+    }
+  }
+
+  .status {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+
+    &.active {
+      background: rgba($green, 0.1);
+      color: $green;
+    }
+
+    &.out {
+      background: rgba($red, 0.1);
+      color: $red;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $gray;
+      font-size: 16px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

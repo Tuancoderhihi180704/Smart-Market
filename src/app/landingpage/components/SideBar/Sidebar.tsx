@@ -45,7 +45,7 @@ export default function Sidebar({ role }: { role: Role }) {
     ],
     seller: [
       { label: "Trang chủ", icon: faHome, href: "/dashboard/HomeSeller" },
-      { label: "Sản phẩm", icon: faBox, href: "/products" },
+      { label: "Sản phẩm", icon: faBox, href: "/dashboard/Products" },
       { label: "Đơn hàng", icon: faClipboardList, href: "/orders" },
       { label: "Kho hàng", icon: faWarehouse, href: "/warehouse" },
       { label: "Thống kê", icon: faChartLine, href: "/statistics" },
