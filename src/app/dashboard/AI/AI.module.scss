@@ -1,0 +1,241 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chatSection {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .chatBox {
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    overflow-y: auto;
+
+    .message {
+      display: flex;
+      margin-bottom: 1rem;
+
+      .bot {
+        background: #6c63ff;
+        color: #fff;
+        border-radius: 50%;
+        padding: 0.5rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+      }
+
+      .textBox {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        position: relative;
+
+        p {
+          margin: 0;
+          font-size: 0.95rem;
+        }
+
+        .time {
+          font-size: 0.75rem;
+          color: #aaa;
+          position: absolute;
+          bottom: -1.2rem;
+          right: 0.5rem;
+        }
+      }
+    }
+
+    .status {
+      font-size: 0.8rem;
+      color: #6c63ff;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 0.5rem;
+
+    input {
+      border: none;
+      flex: 1;
+      background: transparent;
+      outline: none;
+      font-size: 0.95rem;
+      padding: 0.5rem;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      label {
+        margin-right: 0.5rem;
+        font-size: 0.8rem;
+        color: #555;
+
+        input {
+          margin-right: 0.3rem;
+        }
+      }
+
+      button {
+        background: #6c63ff;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.suggestionSection {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        background: #f5f5f5;
+        border: none;
+        border-radius: 6px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+        color: #555;
+        cursor: pointer;
+
+        &:hover {
+          background: #e0e0e0;
+        }
+      }
+
+      .exportBtn {
+        background: #3dcf8e;
+        color: #fff;
+
+        &:hover {
+          background: #2bb674;
+        }
+      }
+
+      .menuIcon {
+        font-size: 1rem;
+        color: #888;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .card {
+    background: #f9fafb;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        font-size: 1rem;
+        color: #333;
+        margin: 0;
+      }
+
+      span {
+        font-size: 0.75rem;
+        color: #aaa;
+      }
+    }
+
+    p {
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+      color: #666;
+    }
+
+    .stockInfo {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+
+      strong {
+        color: #333;
+      }
+    }
+
+    .progressBar {
+      background: #e0e0e0;
+      border-radius: 6px;
+      height: 6px;
+      position: relative;
+
+      .progress {
+        background: #ff9800;
+        height: 100%;
+        border-radius: 6px;
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        top: -1.2rem;
+        font-size: 0.75rem;
+        color: #333;
+      }
+    }
+  }
+}

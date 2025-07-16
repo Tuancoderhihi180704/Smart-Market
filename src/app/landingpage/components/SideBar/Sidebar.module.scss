@@ -1,0 +1,154 @@
+// 🎨 Màu sắc theme
+$bg-color: #1f2630;
+$active-color: #3a57e8;
+$text-color: #ffffff;
+$text-muted: #b0b9c8;
+$hover-bg: rgba(255, 255, 255, 0.05);
+$border-radius: 12px;
+
+.sidebar {
+  width: 250px;
+  background-color: $bg-color;
+  color: $text-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+
+  &.collapsed {
+    width: 80px;
+
+    .logo {
+      display: none;
+    }
+
+    .menuItem span {
+      display: none;
+    }
+
+    .tooltip {
+      position: absolute;
+      left: 80px;
+      background: #333;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .info {
+      display: none;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+
+  .logo {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+    .lockIcon {
+      margin-right: 8px;
+    }
+  }
+
+  .toggleBtn {
+    background: none;
+    border: none;
+    color: $text-muted;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+// 📌 Đảm bảo menu nằm dưới header
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin-top: 8px; // Khoảng cách dưới header
+  flex-grow: 1;
+  overflow-y: auto;
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: $border-radius;
+    color: $text-muted;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: $hover-bg;
+      color: $text-color;
+    }
+
+    &.active {
+      background-color: $active-color;
+      color: #fff;
+
+      .icon {
+        color: #fff;
+      }
+    }
+
+    .icon {
+      margin-right: 12px;
+      min-width: 18px;
+      color: inherit;
+      transition: color 0.2s;
+    }
+  }
+}
+
+.user {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    background-color: #3a57e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 12px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-weight: bold;
+      font-size: 14px;
+      color: $text-color;
+    }
+
+    .role {
+      font-size: 12px;
+      color: $text-muted;
+    }
+  }
+}

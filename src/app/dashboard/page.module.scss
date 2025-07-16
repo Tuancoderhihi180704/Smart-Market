@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}

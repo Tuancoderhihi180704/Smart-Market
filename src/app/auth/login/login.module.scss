@@ -244,4 +244,24 @@
       }
     }
   }
+ .inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+
+  .error {
+    height: 16px; // luôn dành chỗ
+    margin-top: 4px;
+    font-size: 12px;
+    color: #e53935;
+    visibility: hidden; // mặc định ẩn (khi không có lỗi)
+  }
+
+  &.hasError .error {
+    visibility: visible; // có lỗi thì hiện
+  }
+
+}
 }

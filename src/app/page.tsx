@@ -1,16 +1,9 @@
-
-import Header from "@/app/landingpage/components/Header";
-import Main from "@/app/landingpage/components/Main";
-import Footer from "@/app/landingpage/components/Footer";
-import styles from "@/app/landingpage/components/landing.module.scss";
+import Home from "@/app/landingpage/components/_landing_home/page";
 
 
-export default function Home() {
+
+export default function SmartMarketAI() {
   return (
-     <div className={styles.container} >
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <Home/>
   );
 }

@@ -57,7 +57,7 @@ export default function RegisterPage() {
 
         <input type="text" placeholder="Nhập họ và tên đầy đủ" />
         <input type="text" placeholder="Nhập tên đăng nhập" />
-        <input type="text" placeholder="vendor@example.com" />
+        <input type="text" placeholder="Vui lòng nhập email" />
 
         <div className={styles.passwordInput}>
           <input

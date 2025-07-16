@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./landing.module.scss";
+import styles from "./landing.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBox,
