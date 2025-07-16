@@ -1,0 +1,11 @@
+// 📁 /app/dashboard/layout.module.scss
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  overflow: auto;
+}
